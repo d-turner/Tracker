@@ -1,0 +1,9 @@
+init eslint
+
+$ npm install eslint
+
+Create config file 
+$ eslint --init
+or 
+> Create '.eslintrc.json' File
+
