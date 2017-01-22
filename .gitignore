@@ -1,6 +1,7 @@
 # My files 
 .eslintrc.json
 .vscode/
+lib/
 
 # Logs
 logs
