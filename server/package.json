@@ -4,6 +4,7 @@
   "description": "Speedtest server backend",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node src/index.js",
     "test": "eslint src/",
     "eslint": "eslint src/"
   },
