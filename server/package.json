@@ -4,7 +4,8 @@
   "description": "Speedtest server backend",
   "main": "index.js",
   "scripts": {
-    "test": "eslint src/"
+    "test": "eslint src/",
+    "eslint": "eslint src/"
   },
   "keywords": [
     "javascript",
