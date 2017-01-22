@@ -11,5 +11,9 @@
     "node"
   ],
   "author": "Daniel Turner dturner@tcd.ie",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-turner/Tracker.git"
+  }
 }
