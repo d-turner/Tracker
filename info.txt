@@ -1,9 +1,17 @@
-init eslint
+Setup a node project:
+Create project directory 
+Create server directory and initialise it (npm init)
+Install the dependencies (npm --save // npm --save-dev)
 
-$ npm install eslint
+Configuring eslint:
+1. Install
+$ npm install eslint --save-dev
+2. Init eslint (creates .eslint.json file)
+$ ./node_modules/.bin/eslint --init
+3. Configure rules for eslint
+4. install the eslint extension
 
-Create config file 
-$ eslint --init
-or 
-> Create '.eslintrc.json' File
-
+Using Babel
+1. Can use babel require hooks (### should not be used in production ###)
+see index.js
+2. Use pre-compiled scripts (### should be used in production ##)
