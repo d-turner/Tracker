@@ -12,6 +12,11 @@ $ ./node_modules/.bin/eslint --init
 4. install the eslint extension
 
 Using Babel
-1. Can use babel require hooks (### should not be used in production ###)
+1. Install babel as a devDependency (for this project I am going to use babel-cli)
+2. Can use babel require hooks (### should not be used in production ###)
 see index.js
-2. Use pre-compiled scripts (### should be used in production ##)
+2 a. Use pre-compiled scripts, see package.json(### should be used in production ##) babel-cli
+
+Testing
+Supertest is a wrapper for the request library and then you can use a suite on top of this like mocha or jasmine.
+ 
