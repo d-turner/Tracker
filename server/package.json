@@ -6,7 +6,8 @@
   "scripts": {
     "start": "babel-node src/index.js",
     "build": "babel src -d lib",
-    "test": "eslint src/ && babel-node test/"
+    "test": "eslint src/ && babel-node test/",
+    "mocha": "mocha --require babel-core/register"
   },
   "keywords": [
     "javascript",
@@ -30,6 +31,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
+    "mocha": "^3.2.0",
     "supertest": "^2.0.1"
   },
   "babel": {
