@@ -1,12 +1,15 @@
 // import npm packages
 import express from 'express';
 import morgan from 'morgan';
-import winston from 'winston';
+
+// local packages
+import logger from './util/logger';
 
 // init app
 const app = express();
 
-app.use(morgan('dev'));
+// setup logging
+app.use(morgan('combined', {stream: logger.stream}));
 
 // test method
 app.get('/', (req, res) => {
