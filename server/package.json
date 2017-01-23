@@ -6,8 +6,8 @@
   "scripts": {
     "start": "babel-node src/index.js",
     "build": "babel src -d lib",
-    "test": "eslint src/ && babel-node test/",
-    "mocha": "mocha --require babel-core/register"
+    "mocha": "mocha --require babel-core/register",
+    "eslint": "eslint src/ test/"
   },
   "keywords": [
     "javascript",
