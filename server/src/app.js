@@ -18,10 +18,17 @@ app.get('/', (req, res) => {
 
 // catch all other requests
 app.use((err, req, res, next) => {
-  winston.log('error', err.stack);
-  // if (err) res.send(err);
-  res.status(500).send('Not working');
+  if (err) {
+    logger.error(err.stack);
+    res.status(505).send(err);
+  }
+  res.status(404).send('Not implemented (1)');
+  next();
+}, (req, res, next) => {
+  if (req.method === 'POST') res.status(505).send('No POST requests on this server');
+  res.status(404).send('Not implemented (2)');
+  next();
 });
 
 export default app;
-export {winston, morgan};
+export {logger};
