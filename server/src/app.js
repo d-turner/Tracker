@@ -9,6 +9,8 @@ import logger from './util/logger';
 const app = express();
 
 // setup logging
+// morgan logs every request that comes into express in a nice format
+// morgan stream your output to the logger
 app.use(morgan('combined', {stream: logger.stream}));
 
 // test method
