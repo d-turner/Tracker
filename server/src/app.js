@@ -17,16 +17,20 @@ app.get('/', (req, res) => {
 });
 
 // catch all other requests
-app.use((err, req, res, next) => {
-  if (err) {
-    logger.error(err.stack);
-    res.status(505).send(err);
+app.use((req, res, next) => {
+  if (req.method === 'POST') {
+    next(new Error('Forbidden: POST'));
+    return;
   }
-  res.status(404).send('Not implemented (1)');
+  // simulate database error for /simulate
+  if (req.originalUrl === '/simulate') {
+    next(new Error('Database error'));
+    return;
+  }
+  res.status(404).send('404: File not found.');
   next();
-}, (req, res, next) => {
-  if (req.method === 'POST') res.status(505).send('No POST requests on this server');
-  res.status(404).send('Not implemented (2)');
+});
+
   next();
 });
 
