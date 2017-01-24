@@ -1,6 +1,7 @@
 // import npm packages
 import express from 'express';
 import morgan from 'morgan';
+import bodyParser from 'body-parser';
 
 // local packages
 import logger from './util/logger';
@@ -13,6 +14,9 @@ const app = express();
 // morgan stream your output to the logger
 app.use(morgan('combined', {stream: logger.stream}));
 
+// add body parsing
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 // test method
 app.get('/', (req, res) => {
   res.send('Hello World');
