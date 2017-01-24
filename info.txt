@@ -22,6 +22,13 @@ Supertest is a wrapper for the request library and then you can use a suite on t
 
 Express
 Development and production middleware come built in.
-Calling next() simply just sends the request down the middleware pipeline
+
+Calling next() simply just sends the request down the middleware pipeline via callback
+The callback is simply put on the callback queue and the current function continues to execute
+Use a 'return' statement to halt the flow of execution to prevent errors such as 
+'Error: Can't set headers after they are sent.'
+
 Calling next(new Error()) sends the request to the next 'error handling' middleware
-  
+Error handling middleware has 'error' or 'err' as the first argument.
+If there is no next in the pipeline the execution is finished.
+
