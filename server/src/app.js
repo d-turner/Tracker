@@ -31,6 +31,13 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((err, req, res, next) => {
+  if (err.message === 'Forbidden: POST') {
+    res.status(403).send(err.message);
+    return;
+  }
+  logger.error(err);
+  res.status(500).send('Sorry something went wrong');
   next();
 });
 
