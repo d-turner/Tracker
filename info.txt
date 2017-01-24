@@ -19,4 +19,9 @@ see index.js
 
 Testing
 Supertest is a wrapper for the request library and then you can use a suite on top of this like mocha or jasmine.
- 
+
+Express
+Development and production middleware come built in.
+Calling next() simply just sends the request down the middleware pipeline
+Calling next(new Error()) sends the request to the next 'error handling' middleware
+  
