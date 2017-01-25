@@ -5,6 +5,8 @@ import bodyParser from 'body-parser';
 
 // local packages
 import logger from './util/logger';
+// import routes from './routes';
+// {...} app.use(routes);
 
 // init app
 const app = express();
@@ -17,7 +19,10 @@ app.use(morgan('combined', {stream: logger.stream}));
 // add body parsing
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-// test method
+
+// app.use(express.static(__dirname.join('/public')));
+
+// index method
 app.get('/', (req, res) => {
   res.send('Hello World');
 });
