@@ -32,3 +32,33 @@ Calling next(new Error()) sends the request to the next 'error handling' middlew
 Error handling middleware has 'error' or 'err' as the first argument.
 If there is no next in the pipeline the execution is finished.
 
+ES6 / ES2015
+Scoping:
+'var' uses variable hoisting 
+'let' does not, provides block Scoping
+'const' does not and can only be assigned once, it will raise an error otherwise.
+
+Argument spreading:
+function example(...args) {
+  // args is an array of the input
+  args.foreach( data, // do something useful)
+}
+
+function numbersExample(x, y, z) {
+  // do something here
+}
+var numbers = [1, 2, 3];
+numbersExample(...numbers);
+
+Classes: 
+Class App {
+  constructor() { ... };
+  method() { ... };
+}
+
+Modules:
+
+import something from 'something';
+export something;
+or
+export default something;
