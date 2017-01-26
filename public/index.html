@@ -3,22 +3,32 @@
   <head lang='en'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta charset='UTF-8'>
-    <link href='stylesheet/path' rel='stylesheet'>
+    <!-- <link href='stylesheet/path' rel='stylesheet'> -->
     <title>Speedtest Tracker</title>
     
     <!-- add bower componenets -->
-    <script src='lib/angular/angular.min.js'></script>
+    <script src='lib/angular/angular.js'></script>
   </head>
 
-  <body>
+  <body ng-app='speedtest-tracker'>
 
     <h1>Starting development of the frontend!</h1>
+    
+    <div ng-controller='speedtestController'> 
+      <div ng-repeat='speed in speeds.data'>
+        <h2>ID: {{ speed.id }}</h2>
+        <h2>Speed: {{ speed.speed }}</h2>
+      </div>
+    </div>
 
     <!-- Modules -->
+    <script src='js/app.js'></script>
 
     <!-- Controllers -->
-    
+    <script src='js/controllers/speedtestController.js'></script>
+
     <!-- Services -->
+    <script src='js/services/speedtestService.js'></script>
 
     <!-- Directives -->
   </body>
