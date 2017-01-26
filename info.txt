@@ -1,3 +1,4 @@
+### Backend ###
 Setup a node project:
 Create project directory 
 Create server directory and initialise it (npm init)
@@ -62,3 +63,13 @@ import something from 'something';
 export something;
 or
 export default something;
+
+
+### Frontend ###
+Dependency manager:
+Install bower and setup configuration files
+$ npm install -g bower
+
+Angular
+
+
