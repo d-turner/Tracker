@@ -1,1 +1,1 @@
-var app = angular.module('speedTracker', []);
+var app = angular.module('speedtest-tracker', []);
