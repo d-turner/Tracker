@@ -14,17 +14,35 @@ const app = express();
 // setup logging
 // morgan logs every request that comes into express in a nice format
 // morgan stream your output to the logger
-app.use(morgan('combined', {stream: logger.stream}));
+app.use(morgan('combined', { stream: logger.stream }));
 
 // add body parsing
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(__dirname.join('/public')));
+app.use(express.static(path.join(__dirname, '../../public')));
 
 // index method
 app.get('/', (req, res) => {
-  res.send('Hello World');
+  // res.send('Hello World');
+  res.sendFile('index.html');
+});
+
+// dummy data
+app.get('/api/speeds', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.json([{
+    id: 1,
+    speed: 12,
+  },
+  {
+    id: 2,
+    speed: 40,
+  },
+  {
+    id: 3,
+    speed: 50,
+  }]);
 });
 
 // catch all other requests
