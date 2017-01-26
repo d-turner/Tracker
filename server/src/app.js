@@ -2,6 +2,7 @@
 import express from 'express';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
+import path from 'path';
 
 // local packages
 import logger from './util/logger';
@@ -71,4 +72,4 @@ app.use((err, req, res, next) => {
 });
 
 export default app;
-export {logger};
+export { logger };
